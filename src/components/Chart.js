@@ -1,64 +1,62 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ChartRow from './ChartRow';
 
-let tableRowsData = [
-    {
-        Title: 'Billy Elliot ',
-        Length: '123',
-        Rating: '5',
-        Categories: ['Drama','Comedia'],
-        Awards: 2
-    },
-    {
-        Title: 'Alicia en el país de las maravillas',
-        Length: '142',
-        Rating: '4.8',
-        Categories: ['Drama','Acción','Comedia'],
-        Awards: 3
-    },
-    
-]
+class Chart extends Component{
+	constructor(){
+        super()
+        this.state = {
+            chartRow : []
+        }
+    }
+
+	componentDidMount(){
+        fetch('/api/products')
+        .then(respuesta =>{
+            return respuesta.json()
+        })
+        .then(products => {	
+            //console.log(genres)
+            this.setState({ChartRow: products.data});
+        })
+        .catch(error => console.log(error))
+
+    }
+    render(){
 
 
-function Chart (){
-    return (
-        /* <!-- DataTales Example --> */
-        <div className="card shadow mb-4">
-            <div className="card-body">
-                <div className="table-responsive">
-                    <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
-                        <thead>
-                            <tr>
-                                <th>Título</th>
-                                <th>Duración</th>
-                                <th>Rating</th>
-                                <th>Género</th>
-                                <th>Premios</th>
-                            </tr>
-                        </thead>
-                        <tfoot>
-                            <tr>
-                                <th>Título</th>
-                                <th>Duración</th>
-                                <th>Rating</th>
-                                <th>Género</th>
-                                <th>Premios</th>
-                            </tr>
-                        </tfoot>
-                        <tbody>
-                            {
-                            tableRowsData.map( ( row , i) => {
-                                return <ChartRow { ...row} key={i}/>
-                            })
-                            }
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-    )
-}
+        return(
+            <React.Fragment>
+                        {/*<!-- PRODUCTS LIST -->*/}
+                        <h1 className="h3 mb-2 text-gray-800">Lista de Productos</h1>
+                        
+                        {/*<!-- DataTales Example -->*/}
+                        <div className="card shadow mb-4">
+                            <div className="card-body">
+                                <div className="table-responsive">
+                                    <table className="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>Id</th>
+                                                <th>Nombre</th>
+                                                <th>Descripción</th>
+                                                <th>Marca</th>
+                                                <th>Precio</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+            
+                                        </tfoot>
+                                        <tbody>
+                                                {this.state.chartRow.map((product, index) =>
+                                                    <ChartRow product={product} key={index}/>
+                                            )}																												
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>            
+            </React.Fragment>
+        )
+    }}
 
 export default Chart;

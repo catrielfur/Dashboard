@@ -6,7 +6,7 @@ import SmallCard from './SmallCard';
 /* <!-- Movies in DB --> */
 
 let moviesInDB = {
-    title: 'Movies in Data Base',
+    title: 'Productos en la base de datos',
     color: 'primary', 
     cuantity: 21,
     icon: 'fa-clipboard-list'

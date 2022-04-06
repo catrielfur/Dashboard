@@ -22,20 +22,20 @@ function SideBar(){
                 <li className="nav-item active">
                     <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - DH movies</span></Link>
+                        <span>Dashboard - AUTOYA</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider"/>
 
                 {/*<!-- Heading -->*/}
-                <div className="sidebar-heading">Actions</div>
+                <div className="sidebar-heading">Acciones</div>
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
                     <Link className="nav-link collapsed" to="/generos">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Generos</span>
+                        <span>Listado de Productos</span>
                     </Link>
                 </li>
 
@@ -43,14 +43,21 @@ function SideBar(){
                 <li className="nav-item">
                     <a className="nav-link" href="/ultima-pelicula">
                         <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Últimas películas</span></a>
+                        <span>Categorías</span></a>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item">
                     <a className="nav-link" href="/tabla-peliculas">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Tabla de películas</span></a>
+                        <span>Último producto en base de datos</span></a>
+                </li>
+
+                {/*<!-- Nav Item - Tables -->*/}
+                <li className="nav-item">
+                    <a className="nav-link" href="/tabla-peliculas">
+                        <i className="fas fa-fw fa-table"></i>
+                        <span>Información General</span></a>
                 </li>
 
                 {/*<!-- Divider -->*/}

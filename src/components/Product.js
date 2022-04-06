@@ -1,8 +1,8 @@
-import React, {Component } from 'react';
+import React, {Component} from 'react';
 
-import MovieList from './MovieList';
+import ProductsList from './ProductsList';
 
-class Movie extends Component{
+class Product extends Component{
 	constructor(){
         super()
         this.state = {
@@ -11,11 +11,11 @@ class Movie extends Component{
     }
 
 	componentDidMount(){
-        fetch('http://localhost:3000/api/products')
+        fetch('/api/products')
         .then(respuesta =>{
             return respuesta.json()
         })
-        .then(movies => {	
+        .then(products => {	
             //console.log(genres)
             this.setState({productsList: products.data});
         })
@@ -27,7 +27,7 @@ class Movie extends Component{
     return(
         <React.Fragment>
 				    {/*<!-- PRODUCTS LIST -->*/}
-					<h1 className="h3 mb-2 text-gray-800">All the movies in the Database</h1>
+					<h1 className="h3 mb-2 text-gray-800">Listado de Productos</h1>
 					
 					{/*<!-- DataTales Example -->*/}
 					<div className="card shadow mb-4">
@@ -37,24 +37,18 @@ class Movie extends Component{
 									<thead>
 										<tr>
                                             <th>Id</th>
-                                            <th>Titulo</th>
-                                            <th>Calificación</th>
-                                            <th>Premios</th>
-                                            <th>Duración</th>
+                                            <th>Nombre</th>
+                                            <th>Descripción</th>
+                                            <th>Marca</th>
+                                            <th>Precio</th>
 										</tr>
 									</thead>
 									<tfoot>
-										<tr>
-                                            <th>Id</th>
-                                            <th>Titulo</th>
-                                            <th>Calificación</th>
-                                            <th>Premios</th>
-                                            <th>Duración</th>
-										</tr>
+		
 									</tfoot>
 									<tbody>
-											{this.state.moviesList.map((movie, index) =>
-												<MovieList movie={movie} key={index}/>
+											{this.state.productsList.map((product, index) =>
+												<ProductsList product={product} key={index}/>
 										)}																												
 									</tbody>
 								</table>
@@ -64,4 +58,4 @@ class Movie extends Component{
         </React.Fragment>
     )
 }}
-export default Movie;
+export default Product;

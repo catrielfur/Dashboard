@@ -1,18 +1,17 @@
 import React from 'react';
 import LastMovieInDb from './LastMovieInDb';
-import GenresInDb from './GenresInDb';
+import Product from './Product';
 
 function ContentRowCenter(){
     return (
         <div className="row">
-            
-            {/*<!-- Last Movie in DB -->*/}
+        <div className="container-fluid">
+		<div className="d-sm-flex aligns-items-center justify-content-between mb-4">
             <LastMovieInDb />
-            {/*<!-- End content row last movie in Data Base -->*/}
+           
 
-            {/*<!-- Genres in DB -->*/}
-            <GenresInDb />
-
+            </div>
+            </div>
         </div>
     )
 }
