@@ -1,8 +1,9 @@
 import React from 'react';
 import LastMovieInDb from './LastMovieInDb';
-import Product from './Product';
+//import Product from './Product';
 
-function ContentRowCenter(){
+function ContentRowCenter(props){
+    //fetch("http://localhost:3000/products/ + {props.match.params.id"})
     return (
         <div className="row">
         <div className="container-fluid">

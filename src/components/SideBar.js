@@ -1,6 +1,8 @@
 import React from 'react';
-import image from '../assets/images/logo-DH.png';
+import image from '../assets/images/logo.png';
 import { Link } from "react-router-dom";
+
+
 
 function SideBar(){
     return(
@@ -11,7 +13,7 @@ function SideBar(){
                 {/*<!-- Sidebar - Brand -->*/}
                 <Link className="sidebar-brand d-flex align-items-center justify-content-center" to="/">
                     <div className="sidebar-brand-icon">
-                        <img className="w-100" src={image} alt="Digital House"/>
+                        <img className="w-50" src={image} alt="Digital House"/>
                     </div>
                 </Link>
 
@@ -22,7 +24,8 @@ function SideBar(){
                 <li className="nav-item active">
                     <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - AUTOYA</span></Link>
+                        <span>Dashboard - AUTOYA</span>
+                    </Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
@@ -33,7 +36,7 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link collapsed" to="/generos">
+                    <Link className="nav-link collapsed" to="/listado-productos">
                         <i className="fas fa-fw fa-folder"></i>
                         <span>Listado de Productos</span>
                     </Link>
@@ -41,23 +44,33 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
-                    <a className="nav-link" href="/ultima-pelicula">
+                    <Link className="nav-link" to="/Categorias">
                         <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Categorías</span></a>
+                        <span>Categorías</span></Link>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item">
-                    <a className="nav-link" href="/tabla-peliculas">
+                    <Link className="nav-link" to="/Ultimo-producto">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Último producto en base de datos</span></a>
+                        <span>Último producto en base de datos</span>
+                    </Link>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item">
-                    <a className="nav-link" href="/tabla-peliculas">
+                    <Link className="nav-link" to="/Buscar-producto">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Información General</span></a>
+                        <span>Buscar por producto</span>
+                    </Link>
+                </li>
+
+                 {/*<!-- Nav Item - Tables -->*/}
+                 <li className="nav-item">
+                    <Link className="nav-link" to="/Usuarios">
+                    <i className="fas fa-fw fa-folder"></i>
+                        <span>Usuarios</span>
+                    </Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
