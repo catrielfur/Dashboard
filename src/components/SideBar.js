@@ -73,6 +73,22 @@ function SideBar(){
                     </Link>
                 </li>
 
+                
+                {/* <li className="nav-item">
+                    <Link className="nav-link" to="/producto-por-ID">
+                    <i className="fas fa-fw fa-folder"></i>
+                        <span>Producto por ID</span>
+                    </Link>
+                </li> */}
+
+             {/*    <!-- Nav Item - Tables -->}
+                <li className="nav-item">
+                    <Link className="nav-link" to="/Usuarios2">
+                    <i className="fas fa-fw fa-folder"></i>
+                        <span>Usuarios2</span>
+                    </Link>
+                </li> */}
+
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block"/>
             </ul>

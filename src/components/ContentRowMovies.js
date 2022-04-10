@@ -1,6 +1,7 @@
 import React from 'react';
 import SmallCard from './SmallCard';
-import CuantityProducts from './CuantityProducts';
+//import CuantityProducts from './CuantityProducts';
+//import TotalUsuarios from './TotalUsuarios';
 
 /*  Cada set de datos es un objeto literal */
 
@@ -9,7 +10,7 @@ import CuantityProducts from './CuantityProducts';
 let moviesInDB = {
     title: 'Productos en la base de datos',
     color: 'primary', 
-    cuantity: 21,
+    cuantity: '500',
     icon: 'fa-solid fa-car'
 }
 
@@ -18,7 +19,7 @@ let moviesInDB = {
 let totalAwards = {
     title:' Usuarios', 
     color:'success', 
-    cuantity: '79',
+    cuantity: 78,
     icon:'fa-user-check'
 }
 

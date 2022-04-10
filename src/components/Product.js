@@ -17,7 +17,7 @@ class Product extends Component{
         })
         .then(products => {	
             //console.log(genres)
-            this.setState({productsList: products.data});
+            this.setState({productsList: products.name});
         })
         .catch(error => console.log(error))
 
