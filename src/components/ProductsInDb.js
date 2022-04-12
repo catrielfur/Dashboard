@@ -49,7 +49,6 @@ class Product extends Component{
 									<tbody>
 											{this.state.productsList.map((product, index) =>
 												<ProductsList product={product} key={index}/>
-                                                
 										)}																												
 									</tbody>
 								</table>

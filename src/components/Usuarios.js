@@ -1,23 +1,23 @@
-import React, {Component} from 'react';
+import React, {Component } from 'react';
 
-import ProductsList from './ProductsList';
+import UsuariosList from './UsuariosList';
 
-class Product extends Component{
+class Usuarios extends Component{
 	constructor(){
         super()
         this.state = {
-            productsList : []
+            usuariosList : []
         }
     }
 
 	componentDidMount(){
-        fetch('/api/products')
+        fetch('http://localhost:3000/api/users')
         .then(respuesta =>{
             return respuesta.json()
         })
-        .then(products => {	
-            //console.log(genres)
-            this.setState({productsList: products.data});
+        .then(users => {	
+            //console.log(users)
+            this.setState({usuariosList: users.data});
         })
         .catch(error => console.log(error))
 
@@ -27,7 +27,7 @@ class Product extends Component{
     return(
         <React.Fragment>
 				    {/*<!-- PRODUCTS LIST -->*/}
-					<h1 className="h3 mb-2 text-gray-800">Listado de Productos</h1>
+					<h1 className="h3 mb-2 text-gray-800">Listado de Usuarios en Base de Datos</h1>
 					
 					{/*<!-- DataTales Example -->*/}
 					<div className="card shadow mb-4">
@@ -38,18 +38,17 @@ class Product extends Component{
 										<tr>
                                             <th>Id</th>
                                             <th>Nombre</th>
-                                            <th>Descripción</th>
-                                            <th>Marca</th>
-                                            <th>Precio</th>
+                                            <th>Alias</th>
+                                            <th>Email</th>
+                                            <th>Avatar</th>
 										</tr>
 									</thead>
 									<tfoot>
-		
+
 									</tfoot>
 									<tbody>
-											{this.state.productsList.map((product, index) =>
-												<ProductsList product={product} key={index}/>
-                                                
+											{this.state.usuariosList.map((user, index) =>
+												<UsuariosList user={user} key={index}/>
 										)}																												
 									</tbody>
 								</table>
@@ -59,4 +58,4 @@ class Product extends Component{
         </React.Fragment>
     )
 }}
-export default Product;
+export default Usuarios;

@@ -1,9 +1,6 @@
 import React from 'react';
 import SideBar from './SideBar';
 import TopBar from './TopBar';
-//import ContentWrapper from './ContentWrapper';
-
-//import Chart from './Chart';
 import Footer from './Footer';
 import Product from './Product';
 import Enrutador from './Routes';
@@ -17,20 +14,15 @@ function App() {
       	<div id="wrapper">
           <SideBar />
             <div id="content-wrapper" className="d-flex flex-column">
-         {/*  <ContentWrapper /> */}
-                <div id="content">
-               <TopBar />
-            
+                <div id="content"></div>
+            <TopBar />
             <Enrutador />
-        
 					  <Product />
             <Footer />
-				  </div>
-               </div>
-               </div>    
+				        
+            </div>
+        </div>    
            
-            
-          
     
     </React.Fragment>
   );

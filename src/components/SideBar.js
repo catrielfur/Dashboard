@@ -58,10 +58,18 @@ function SideBar(){
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
-                <li className="nav-item">
+                {/* <li className="nav-item">
                     <Link className="nav-link" to="/Buscar-producto">
                         <i className="fas fa-fw fa-table"></i>
                         <span>Buscar por producto</span>
+                    </Link>
+                </li> */}
+
+                 {/*<!-- Nav Item - Tables -->*/}
+                 <li className="nav-item">
+                    <Link className="nav-link" to="/Users">
+                    <i className="fas fa-fw fa-folder"></i>
+                        <span>Usuarios - API de terceros</span>
                     </Link>
                 </li>
 
@@ -69,7 +77,7 @@ function SideBar(){
                  <li className="nav-item">
                     <Link className="nav-link" to="/Usuarios">
                     <i className="fas fa-fw fa-folder"></i>
-                        <span>Usuarios</span>
+                        <span>Usuarios - API propio</span>
                     </Link>
                 </li>
 

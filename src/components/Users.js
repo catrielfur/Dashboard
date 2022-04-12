@@ -33,6 +33,7 @@ const filtrar=(terminoBusqueda)=>{
     ){
       return elemento;
     }
+    return false;
   });
   setUsuarios(resultadosBusqueda);
 }

@@ -1,50 +1,47 @@
 import React from 'react';
-import SmallCard from './SmallCard';
+import SmallCard2 from './SmallCard2';
 //import CuantityProducts from './CuantityProducts';
 //import TotalUsuarios from './TotalUsuarios';
 
 /*  Cada set de datos es un objeto literal */
 
-/* <!-- Movies in DB --> */
+function ContentRowMovies(){
+/* <!-- Products in DB --> */
 
-let moviesInDB = {
+let productsInDB = {
     title: 'Productos en la base de datos',
-    color: 'primary', 
-    cuantity: '500',
+    color: 'primary',
+    cuantity: '',
     icon: 'fa-solid fa-car'
 }
 
-/* <!-- Total awards --> */
+/* <!-- Total users --> */
 
-let totalAwards = {
+let totalUsers = {
     title:' Usuarios', 
     color:'success', 
     cuantity: 78,
     icon:'fa-user-check'
 }
 
-/* <!-- Actors quantity --> */
+/* <!-- Categories --> */
 
-let actorsQuantity = {
-    title:'Cantidad de productos' ,
+let categories = {
+    title:'Categorías' ,
     color:'warning',
     cuantity:'49',
     icon:'fa-solid fa-stroopwafel'
 }
 
-let cartProps = [moviesInDB, totalAwards, actorsQuantity];
+let cartProps = [productsInDB, totalUsers, categories];
 
-function ContentRowMovies(){
     return (
-    
-        <div className="row">
-            
-            {cartProps.map( (movie, i) => {
 
-                return <SmallCard {...movie} key={i}/>
+<div className="row">
+        {cartProps.map( (categories, i) => {
+            return <SmallCard2 {...categories} key={i}/>
             
-            })}
-
+        })}
         </div>
     )
 }
