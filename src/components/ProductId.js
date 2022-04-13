@@ -1,4 +1,4 @@
-/* let url= "http://localhost:3000/api/products";
+let url= "http://localhost:3000/api/products";
 const productsArray = [{url}]
 
 
@@ -27,4 +27,4 @@ function ProductId (props) {
 
 
 
-export default ProductId;  */
+export default ProductId;

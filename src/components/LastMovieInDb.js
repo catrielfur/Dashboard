@@ -1,5 +1,5 @@
 import React from 'react';
-import imagenFondo from '../assets/images/mandalorian.jpg';
+import imagenFondo from '../assets/images/Ram.jpg';
 
 function LastMovieInDb(){
     return(
@@ -10,10 +10,10 @@ function LastMovieInDb(){
                 </div>
                 <div className="card-body">
                     <div className="text-center">
-                        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={imagenFondo} alt=" Star Wars - Mandalorian "/>
+                        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={imagenFondo} alt=" Star Wars - Ram "/>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa citationem ratione aperiam voluptatum non corporis ratione aperiam voluptatum quae dolorem culpa ratione aperiam voluptatum?</p>
-                    <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View movie detail</a>
+                    <p>Motor 5.7L V8 HEMI MDS VVT. 16 Válvulas / 395 CV de Potencia / 550 N-m Torque Caja automática de 8 velocidades. Capacidad de remolque: 4492 Kg.</p>
+                    <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">Ver detalle del producto</a>
                 </div>
             </div>
         </div>

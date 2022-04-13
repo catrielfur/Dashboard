@@ -82,12 +82,12 @@ function SideBar(){
                 </li>
 
                 
-                {/* <li className="nav-item">
+                 <li className="nav-item">
                     <Link className="nav-link" to="/producto-por-ID">
                     <i className="fas fa-fw fa-folder"></i>
                         <span>Producto por ID</span>
                     </Link>
-                </li> */}
+                </li>
 
              {/*    <!-- Nav Item - Tables -->}
                 <li className="nav-item">

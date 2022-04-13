@@ -11,7 +11,7 @@ function ContentRowMovies(){
 let productsInDB = {
     title: 'Productos en la base de datos',
     color: 'primary',
-    cuantity: '',
+    cuantity: '13',
     icon: 'fa-solid fa-car'
 }
 
@@ -20,7 +20,7 @@ let productsInDB = {
 let totalUsers = {
     title:' Usuarios', 
     color:'success', 
-    cuantity: 78,
+    cuantity: 5,
     icon:'fa-user-check'
 }
 
@@ -29,7 +29,7 @@ let totalUsers = {
 let categories = {
     title:'Categorías' ,
     color:'warning',
-    cuantity:'49',
+    cuantity:'6',
     icon:'fa-solid fa-stroopwafel'
 }
 

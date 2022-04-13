@@ -7,6 +7,11 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 function Users() {
 
+    //estado0= usuarios y estado1= setUsuarios
+    //set"algo" es la que almacena la función que nos permite almacenar el estado
+    //similar a como lo hacía setState de los componentes de clase
+    
+    //Haciendo uso de la desestructutación nativa de JS queda:
   const [usuarios, setUsuarios]= useState([]);
   const [tablaUsuarios, setTablaUsuarios]= useState([]);
   const [busqueda, setBusqueda]= useState("");

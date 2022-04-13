@@ -21,6 +21,18 @@ class CategoriesInDb extends Component{
             categoriesList : []
         };
     };
+    //Alertas hechas con eventos según a donde ponga el mouse
+    lanzarAlerta() {
+        alert ("me clickeaste!");
+    }
+
+    cambiarAmarillo() {
+        document.querySelector("card-body").style.backgroundColor = "yellow";
+    }
+
+    cambiarRosa() {
+        document.querySelector("card-body").style.backgroundColor = "pink";
+    }
 
     componentDidMount(){
         fetch('http://localhost:3000/api/categories')
@@ -36,18 +48,19 @@ class CategoriesInDb extends Component{
         .catch(error => console.log(error))
 
     }
-changeBG(){
+/* changeBG(){
     const bkToApply = "bg-secondary"
     let divToChange = document.querySelector('#cardBody')
     if(divToChange.classList.contains(bkToApply)) {
         divToChange.classList.remove(bkToApply)
     } else {
         divToChange.classList.add(bkToApply)
-    }
-}
+    } */
+
 
     render() {
 
+        <div ></div>
     return (
 
         <React.Fragment>
@@ -57,7 +70,7 @@ changeBG(){
                         <div className="card-header py-3">  
                             <h6 className="m-0 font-weight-bold text-gray-800" onMouseOver ={this.changeBG}>Todas las categorias</h6>
                         </div>
-                        <div className="card-body" id='cardBody'>
+                        <div onClick={ this.lanzarAlerta } className="card-body" id='cardBody'>
                             <div className="row">
                                 {
                                     this.state.categoriesList.map((category,index)=>{

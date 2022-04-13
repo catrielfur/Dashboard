@@ -1,12 +1,12 @@
 import React, {Component } from 'react';
 
-import MovieList from './MovieList';
+import UltimoProductoList from './UltimoProductoList';
 
-class Movie extends Component{
+class UltimoProducto extends Component{
 	constructor(){
         super()
         this.state = {
-            productsList : []
+           UltimoProductoList : []
         }
     }
 
@@ -15,7 +15,7 @@ class Movie extends Component{
         .then(respuesta =>{
             return respuesta.json()
         })
-        .then(movies => {	
+        .then(products => {	
             //console.log(genres)
             this.setState({productsList: products.data});
         })
